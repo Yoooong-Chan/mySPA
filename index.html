@@ -17,30 +17,30 @@
     <script src="main.js" defer></script>
   </head>
   <body>
-    <nav id="navbar">
-      <div class="navbar__logo">
-        <i class="fas fa-caret-square-down"></i>
-        <a href="#">Chan</a>
-      </div>
-      <ul>
-        class="navbar__menu">
-        <li class="navbar">Home</li>
-        <li class="navbar">About</li>
-        <li class="navbar">Skills</li>
-        <li class="navbar">My work</li>
-        <li class="navbar">Testimonia</li>
-        <li class="navbar">Contact</li>
-      </ul>
+      <nav class="navbar">
+     <div class="navbar__logo">
+      <i class="fas fa-caret-square-down"></i>
+      <a href="#">Chan</a>
+     </div>
+     <ul class="navbar__menu">
+       <li class="navbar__menu-list active">Home</li>
+       <li class="navbar__menu-list">About</li>
+       <li class="navbar__menu-list">Skills</li>
+       <li class="navbar__menu-list">My work</li>
+       <li class="navbar__menu-list">Testimonia</li>
+       <li class="navbar__menu-list">Contact</li>
+     </ul>
     </nav>
     <section id="home">
+      <div class="home__image">
       <img
         src="images/kakaotalk.png"
         alt="Chan's profile photo"
         class="home_avatar"
         style="width: 200px; height: auto;"
       />
-
-      <h1 class>
+    </div>
+      <h1 home__class>
         Hello,<br />
         I'm Dream Coder
       </h1>
@@ -51,8 +51,7 @@
     <section id="about">
       <h1>About me</h1>
       <p>
-        저는 현재 Front-end 개발자가 되기위해서 공부중에 있습니다 개념부터
-        차근차근 익혀 나가겠습니다.
+        I am currently a front end developer.
       </p>
       <div class="about__majors">
         <div class="major__icon">
@@ -102,9 +101,9 @@
       <h1>Skills</h1>
       <h2>Skills & Attributes</h2>
       <p>
-        저는 현재 Front-end 개발자가 되기위해서 공부중에 있습니다 개념부터
-        차근차근 익혀 
-        나가겠습니다.
+       I am currently a front end developer.
+      
+       
       </p>
 
       <div class="skills__left">
@@ -191,10 +190,102 @@
       </div>
     </section>
 
-    <section id="work"></section>
+    <section id="work">
+      <h1>My work</h1>
+     <h3>Projects </h3>
+     <div class="work__category">
+<button class="category__button">All      <span class="category__count">8</span>     </button>
+<button class="category__button">Front-end<span class="category__count">3</span>  </button>
+<button class="category__button">Back-end <span class="category__count">2</span> </button>
+<button class="category__button">Mobile   <span class="category__count">5</span> </button>
 
-    <section id="testimonials"></section>
+     </div>
 
-    <section id="contact"></section>
+<div class="work__projects">
+<a href="http://rt.molit.go.kr/"
+class="project"
+target="blank"
+">
+<img src="images/projects/dsBuffer.png" alt="project__estate" style="width : 200px; height: auto;"/>  
+<div class="project__description">
+  <h3>Easte Site</h3>
+  <span>Apart investment</span>
+</div>
+</a>
+
+<a href="https://academy.dream-coding.com/courses/take/portfolio/lessons/12700312-work-projects"
+class="project"
+target="blank"
+">
+<img src="images/projects/5.png" alt="project__study" style="width : 200px; height: auto;"/>  
+<div class="project__description">
+  <h3>Html and Css </h3>
+  <span>Study</span>
+</div>
+</a>
+
+<a href="https://www.canva.com/"
+class="project"
+target="blank">
+<img src="images/projects/제목 없는 디자인 (1).png" alt="project__webDevelopmet" style="width : 200px; height: auto;"/>  
+<div class="project__description">
+  <h3>Web Development</h3>
+  <span>JavaScript Study</span>
+</div>
+</a>
+
+
+
+</div>
+    </section>
+
+    <section id="testimonials">
+<h1>Testimonials</h1>
+  <h3>See what they say about me</h3>
+<div class="testimonials__face">
+  <img src="/images/projects/people1-200515-154332.jpg" alt="samsung__supervisor" style="width: 200px; height: auto;"/>
+<div class="testimonials__comment">
+  <span class="testimonials__comment">
+<p>  I have a dream 
+  that my four little children will one day live in a nation
+  where they will not be judged by the color of their skin, but by the content of
+  their character
+</p>
+</span>
+</div>
+</div>
+
+<div class="testimonials__face">
+  <img src="/images/projects/people1-200515-154332.jpg" alt="samsung__supervisor" style="width: 200px; height: auto;"/>
+<div class="testimonials__comment">
+  <span class="testimonials__comment">
+<p>  I have a dream 
+  that my four little children will one day live in a nation
+  where they will not be judged by the color of their skin, but by the content of
+  their character
+</p>
+</span>
+</div>
+</div>
+
+
+
+
+
+    </section>
+
+    <section id="contact">
+
+
+<h1 class="contact">Let's talk</h1>
+<h3 class="contact">rhdlwmal1234@naver.com</h3>
+<ul class="contact__icon">
+  <li class="contact__list"><i class="fab fa-github-square "></i></li>
+  <li class="contact__list"><i class="fab fa-invision"></i></li>
+</ul>
+<h3> 2020 Dream coding Chan All rights reserved</h3>
+
+
+    </section>
   </body>
 </html>
