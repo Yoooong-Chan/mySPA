@@ -136,6 +136,7 @@ ul {
   background-color: var(--color-pink);
   padding: 8px;
 }
+
 .navbar__logo {
   color: var(--color-white);
   font-size: var(--font-medium);
@@ -154,8 +155,8 @@ ul {
 }
 
 .navbar__menu-list.active {
-  border: 1px solid var(--color-white);
   border-radius: var(--size-border-radius);
+  border: 1px solid var(--color-white);
 }
 .navbar__menu-list:hover {
   background-color: var(--color-dark-pink);
@@ -171,6 +172,7 @@ ul {
 }
 
 .home__avatar {
+  margin-top: 100px;
   width: 170px;
   height: 170px;
   border: 1.3px solid var(--color-white);
@@ -206,6 +208,9 @@ ul {
   margin: 80px 0px;
   margin-left: 100px;
   margin-right: 100px;
+}
+#about.about--opacity {
+  opacity: 0.5;
 }
 
 .major__icon {
@@ -257,6 +262,9 @@ ul {
 /* Skill */
 #skills {
   background-color: var(--color-yellow);
+}
+#skills.skills--opacity {
+  opacity: 0.5;
 }
 
 .skillset {
@@ -332,6 +340,9 @@ ul.etc__list :hover {
 /*  Work */
 .work__category {
   margin: 40px;
+}
+#work.work--opacity {
+  opacity: 1;
 }
 
 .category__btn {
@@ -490,6 +501,9 @@ ul.etc__list :hover {
 .contact__list i {
   padding-right: 15px;
 }
-
-.home__button {
+/* Scroll */
+.arrow__up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
 }

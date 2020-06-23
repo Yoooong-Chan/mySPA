@@ -4,14 +4,23 @@
 const navbar = document.querySelector('#navbar'); //elemnet요소 받아오기
 const navbarHeight = navbar.getBoundingClientRect().height;
 
+const home = document.querySelector('.home__container');
+const about = document.querySelector('.about__container');
+const skills = document.querySelector('#skills');
+const work = document.querySelector('#work');
+const testimonials = document.querySelector('#testimonials');
+const homeHeight = home.getBoundingClientRect().height;
+
 document.addEventListener('scroll', () => {
-  console.log(window.scrollY);
-  console.log(`navbarHeight :${navbarHeight}`);
   if (window.scrollY > 20) {
     navbar.classList.add('navbar--dark');
   } else {
     navbar.classList.remove('navbar--dark');
   }
+});
+
+document.addEventListener('scroll', () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
 // Handle scrolling when tapping on the navbar menu
