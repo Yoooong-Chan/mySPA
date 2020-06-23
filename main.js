@@ -22,7 +22,23 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) {
     return;
   }
-  console.log(event.target.dataset.link); //dataset안에 -가 link 이기때문에 -link붙임 dataset안에 우리가정의한 변수가 할당됨
-  const elmnt = document.querySelector(link);
-  elmnt.scrollIntoView({behavior: 'smooth'});
+  scrollIntoView(link); //dataset안에 -가 link 이기때문에 -link붙임 dataset안에 우리가정의한 변수가 할당됨
 });
+
+const contactMe = document.querySelector('.home__button'); //data-link하고 싶은곳을 불러옴
+contactMe.addEventListener('click', () => {
+  //click(이 되면) 우리가 정의한 함수를 호출할수있도록함
+  const target = event.target; //타겟은 event.target 즉, 타겟은  home__button
+  const link = target.dataset.link; // home__button에 data-link = link 할당됨
+  if (link == null) {
+    return; // 만약 링크가 다른곳에 이상한곳에 클릭되면 널이되어 작동x
+  }
+  // home__button에 있는  data-link 콘솔창에 나타냄
+  scrollIntoView('#contact'); // link를 스무스하게 작동시킴
+});
+
+function scrollIntoView(selector) {
+  //selector를 주면 그 seclector에 맞는 요소를 찾은다음 스무스하게 이동하는 함수를 만듬
+  const smooth = document.querySelector(selector);
+  smooth.scrollIntoView({behavior: 'smooth'});
+}
