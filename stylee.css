@@ -54,7 +54,7 @@
 
 /* Typography */
 body {
-  margin: 10px;
+  margin: 0px;
   font-family: 'Balsamiq Sans', cursive;
   cursor: default;
 }
@@ -156,10 +156,10 @@ ul {
 
 .navbar__menu-list.active {
   border-radius: var(--size-border-radius);
-  border: 1px solid var(--color-white);
 }
 .navbar__menu-list:hover {
   background-color: var(--color-dark-pink);
+  border: 1px solid var(--color-white);
 }
 
 /* Home */
@@ -225,7 +225,7 @@ ul {
 }
 .major__icon :hover {
   color: var(--color-pink);
-  transform: rotate(-30deg) scale(1.1);
+  transform: scale(1.5);
 }
 .major__icon i {
   transition: all var(--animation-duration) ease-in; /*  모든속성값들을 애니메이션 250~300이 표준*/
@@ -352,7 +352,6 @@ ul.etc__list :hover {
   padding: 8px 48px;
 }
 
-.active,
 .category__btn:hover {
   background-color: var(--color-pink);
   color: var(--color-white);
@@ -376,11 +375,16 @@ ul.etc__list :hover {
   opacity: 0;
   transition: all var(--animation-duration) ease-in;
 }
-
+.work__projects.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
+}
 .work__projects {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
 }
 .project {
   position: relative;
@@ -392,6 +396,10 @@ ul.etc__list :hover {
   margin: 2px;
   background-color: yellow;
   background-color: var(--color-light-white);
+}
+
+.project.invisible {
+  display: none;
 }
 
 .project__img {
@@ -462,9 +470,9 @@ ul.etc__list :hover {
 }
 .home__button:hover {
   font-weight: var(--font-large);
-  color: var(--color-blue);
+
   transition: all var(--animation-duration) ease-in;
-  transform: rotate(-10deg) scale(1.5);
+  transform: scale(1);
 }
 
 .testimonials__speech p {

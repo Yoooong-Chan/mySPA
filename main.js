@@ -66,3 +66,35 @@ document.addEventListener('scroll', () => {
 arrowUp.addEventListener('click', () => {
   scrollIntoView('#home');
 });
+
+/* Projects  */
+const workBtnContainer = document.querySelector('.work__category'); //카테고리안에 버튼
+const projectContainer = document.querySelector('.work__projects'); //프로젝트s안에 프로젝트가 들어있음
+const projects = document.querySelectorAll('.project'); //각각의 프로젝트들을 배열로 받아옴
+
+workBtnContainer.addEventListener('click', (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter == null) {
+    return;
+  }
+
+  projectContainer.classList.add('anim-out'); //anim 효과로 opacity가 0되면서 y축 40px ani효과줌
+
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if (filter === '*' || filter === project.dataset.type) {
+        project.classList.remove('invisible');
+      } else {
+        project.classList.add('invisible');
+      }
+    });
+    // => 삭제하고싶은것이 추가하고 싶은것보다 많을때 사용하면 효율적
+    // 한마디로 * or filter가 누른것이 dataset과 같다면 none이 제거되어 보이게되고
+    // * or filter가 누르지않은 것들은 none이되어 안보이게됨
+    projectContainer.classList.remove('anim-out');
+  }, 300);
+});
+// anim을 add한 이후에, setTimeout으로 인해서 코드가 끝난 이후, 0.3초후에 filter code & remove가 실행되므로,
+// anim효과가 자연스러워진다. 만약 그렇지않다면, filter가 된이후에 0.3초후에 remove되어
+// filter로 인해서 클릭한것들이 보여지고 난이후, 0.3초후에 없어지므로 anim효과가 부자연스럽다.about__majors
+// 한마디로 1 => 1 / 6 => 6이 된다. 6 => 1이 아니라/
